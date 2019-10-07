@@ -37,24 +37,24 @@ for image_name in get_files_sorted_by_modified(images_directory):
 
        with open(os.path.join(images_directory,image_name), "rb") as image:
 
-            print('Image name', image_name)
+            print('Image name:', image_name)
            
-            # print('Building b64 ...')
-            # base64_bytes = b64encode(image.read())
-            # base64_string = base64_bytes.decode(ENCODING)
+            print('Building b64 ...')
+            base64_bytes = b64encode(image.read())
+            base64_string = base64_bytes.decode(ENCODING)
             
-            # print('Requesting to', destination_url)
-            # try:
-            #     resp = requests.post(destination_url, 
-            #             json={
-            #                     'idAssay': id_assay,
-            #                     'idExperiment': id_experiment,
-            #                     'base64': base64_string
-            #                 })
-            #     print(resp)
-            # except Exception as e:
-            #     print(e)
+            print('Requesting to', destination_url)
+            try:
+                resp = requests.post(destination_url, 
+                        json={
+                                'idAssay': id_assay,
+                                'idExperiment': id_experiment,
+                                'base64': base64_string
+                            })
+                print(resp)
+            except Exception as e:
+                print(e)
             
-            # #Espero unos minutos para volver a enviar otra imagen
-            # print('Waiting', wait_seconds, 'seconds')
-            # time.sleep(wait_seconds)
+            #Espero unos minutos para volver a enviar otra imagen
+            print('Waiting', wait_seconds, 'seconds')
+            time.sleep(wait_seconds)
