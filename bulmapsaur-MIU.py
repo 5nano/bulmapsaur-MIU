@@ -17,7 +17,7 @@ parser.add_argument('-ia','--idAssay', type=str,required=True,
                    help='Assay identifier')
 parser.add_argument('-ie','--idExperiment', type=str, required=True,
                    help='Experiment identifier identifier')     
-parser.add_argument('-date', '--optionaDate', type=str, required=False,
+parser.add_argument('-date', '--optionalDate', type=str, required=False,
                     help='Photo date in format "2018-06-29 08:15:27.243860"')
 args = vars(parser.parse_args())
 images_directory = args["dir"]
@@ -25,7 +25,7 @@ destination_url = args["url"]
 wait_seconds = args["sec"]
 id_assay = args["idAssay"]
 id_experiment = args["idExperiment"]
-opt_date = args["optionaDate"]
+opt_date = args["optionalDate"]
 
 ENCODING = 'utf-8'
 
