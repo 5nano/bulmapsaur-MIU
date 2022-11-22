@@ -78,7 +78,7 @@ parso==0.4.0
 patsy==0.5.1
 pexpect==4.7.0
 pickleshare==0.7.5
-Pillow==6.0.0
+Pillow==9.3.0
 pingouin==0.2.7
 pipreqs==0.4.9
 plantcv==3.5.0
